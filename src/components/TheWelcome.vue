@@ -89,7 +89,7 @@ const vanillaCode = ref(Prism.highlight(vanilla, Prism.languages.javascript, 'ja
     <template #icon>
 <!--      <ToolingIcon />-->
     </template>
-    <template #heading>React Usage</template>
+    <template #heading>React</template>
     <pre><code class="language-js" v-html="reactCode"></code></pre>
 
   </WelcomeItem>
@@ -98,7 +98,7 @@ const vanillaCode = ref(Prism.highlight(vanilla, Prism.languages.javascript, 'ja
     <template #icon>
 <!--      <EcosystemIcon />-->
     </template>
-    <template #heading>Vue Usage</template>
+    <template #heading>Vue</template>
     <pre><code class="language-js" v-html="vueCode"></code></pre>
 
   </WelcomeItem>
