@@ -14,19 +14,14 @@ import 'prismjs/themes/prism-tomorrow.css';
 
 const react = `
 import React, { useState } from 'react';
-import AIDatepicker from 'ai-datepicker';
+import AIDatepicker from 'ai-datepicker/react';
 
 export default function App() {
-  const [selectedDate, setSelectedDate] = useState(null);
 
   return (
     <div>
       <h1>Select a Date</h1>
-      <AIDatepicker
-        value={selectedDate}
-        onChange={setSelectedDate}
-      />
-      {selectedDate && <p>You selected: {selectedDate}</p>}
+      <AIDatepicker/>
     </div>
   );
 }
@@ -43,16 +38,13 @@ const vuel = `
 <template>
   <div>
     <h1>Select a Date</h1>
-    <AIDatepicker v-model="selectedDate" />
-    <p v-if="selectedDate">You selected: {{ selectedDate }}</p>
+    <AIDatepicker />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import AIDatepicker from 'ai-datepicker'
-
-const selectedDate = ref(null)
+import AIDatepicker from 'ai-datepicker/vue'
 <\/script>
 `
 
@@ -61,7 +53,7 @@ const vueCode = ref(Prism.highlight(vuel, Prism.languages.javascript, 'javascrip
 
 
 const vanilla = `
-<script src="https://cdn.example.com/ai-datepicker.js"><\/script>
+<script src="https://cdn.jsdelivr.net/npm/ai-datepicker@latest/dist/aidatepicker.js.umd.js"><\/script>
 Date: <input type="text" id="date" data-aidp="date">
 <button data-aidp-button="date">✔</button>
 <div data-aidp-result="date"></div>
